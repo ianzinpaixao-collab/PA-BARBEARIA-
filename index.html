@@ -7,10 +7,9 @@
 <style>
 :root{--gold:#FFD700;--black:#080808;--card:#121212;--green:#25D366}
 *{margin:0;padding:0;box-sizing:border-box}body{background:var(--black);color:#fff;font-family:'Inter',sans-serif}
-.top{padding:14px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;background:rgba(8,8,8,.96);z-index:99;backdrop-filter:blur(10px)}
+.top{padding:14px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;background:rgba(8,8,8,.96);z-index:99}
 .logo{font-family:'Oswald';letter-spacing:2px;font-size:20px} .logo span{color:var(--gold)}
 .btn{background:var(--gold);color:#000;padding:12px 22px;border-radius:8px;font-weight:800;display:inline-block;border:0;cursor:pointer;text-align:center;text-decoration:none}
-.btn-green{background:var(--green);color:#fff}
 .hero{padding:40px 5%;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
 .hero h1{font-family:'Oswald';font-size:44px;line-height:.9;text-transform:uppercase}
 .hero h1 em{color:var(--gold);font-style:normal}
@@ -26,7 +25,7 @@
 .depo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .depo-card{background:var(--card);border:1px solid #222;padding:16px;border-radius:12px}
 .input{width:100%;padding:14px;border-radius:8px;border:0;margin:6px 0;background:#fff;color:#000}
-.wpp{position:fixed;bottom:18px;right:18px;background:var(--green);width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:100;text-decoration:none}
+.wpp{position:fixed;bottom:18px;right:18px;background:var(--green);width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:100;text-decoration:none;color:#fff}
 .badge{background:#1a1a1a;border:1px solid #333;padding:6px 12px;border-radius:20px;font-size:11px;color:#aaa;display:inline-block;margin:3px}
 @media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:34px}.depo{grid-template-columns:1fr}.grid img{height:200px}}
 </style>
@@ -55,17 +54,14 @@
 
 <div style="padding:20px 5%" id="precos">
 <h2 style="font-family:'Oswald';font-size:32px">TABELA DE PREÇOS</h2>
-<div class="box" style="margin-top:12px">
+<p style="color:#666;font-size:13px;margin-bottom:12px">Toque no serviço para agendar no WhatsApp</p>
+<div class="box">
 <div class="item" onclick="agendar('Corte Degradê R$35')"><div><b>Corte Degradê na Régua</b><br><small style="color:#888">Mais pedido</small></div><div class="preco">R$35</div></div>
 <div class="item" onclick="agendar('Freestyle com Risco R$40')"><div><b>Freestyle / Risco Artístico 🔥</b><br><small style="color:#888">Desenho exclusivo</small></div><div class="preco">R$40</div></div>
 <div class="item" onclick="agendar('Corte + Barba R$55')"><div><b>Corte + Barba Completa</b><br><small style="color:#888">Toalha quente</small></div><div class="preco">R$55</div></div>
-<div class="item" style="background:linear-gradient(90deg,#FFD70022,#0000);border:1px solid #FFD70055" onclick="agendar('Plano Mensal PA R$99')"><div><b>💎 Plano Mensal PA - 4 cortes</b><br><small style="color:#FFD700">Economize R$41/mês</small></div><div class="preco">R$99</div></div>
+<div class="item" onclick="agendar('Barba R$25')"><div><b>Barba Completa</b><br><small style="color:#888">Desenho + alinhamento</small></div><div class="preco">R$25</div></div>
+<div class="item" style="background:linear-gradient(90deg,#FFD70022,#0000);border:1px solid #FFD70055" onclick="agendar('Plano Mensal PA R$99 - 4 cortes')"><div><b>💎 Plano Mensal PA - 4 cortes</b><br><small style="color:#FFD700">Economize R$41/mês</small></div><div class="preco">R$99</div></div>
 </div>
-
-<a href="https://topfivesantarita.com.br/empresa/pa-barbearia-00" class="btn" style="background:#222;color:#FFD700;border:1px solid #FFD700;width:100%;margin-top:20px;padding:16px">
-⭐ AVALIE A PA BARBEARIA NA TOPFIVE E GANHE 10% OFF →
-</a>
-<p style="color:#555;font-size:11px;text-align:center;margin-top:6px">Sua avaliação ajuda a gente a ficar no Top 5 de Santa Rita</p>
 </div>
 
 <div style="padding:10px 5% 20px">
@@ -113,19 +109,19 @@
 
 <div style="padding:20px 5% 80px;text-align:center;color:#666">
 <p>© 2026 PA Barbearia 00 - Tv. Bandeirante, 772 - Santa Rita MA</p>
-<p style="font-size:12px">Instagram @pa_barbearia00 • WhatsApp (98) 9164-8974 • TopFive Santa Rita</p>
+<p style="font-size:12px">Instagram @pa_barbearia00 • WhatsApp (98) 9164-8974</p>
 </div>
 
 <a class="wpp" href="https://wa.me/559891648974?text=Ol%C3%A1%20PA!%20Vi%20seu%20site%20e%20quero%20agendar">W</a>
 
 <script>
-function agendar(s){document.getElementById('serv').value=s; const m=`Olá PA! Vi seu site e quero: ${s}. Quais horários hoje?`; window.open(`https://wa.me/559891648974?text=${encodeURIComponent(m)}`,'_blank');}
+function agendar(s){ const m=`Olá PA! Vi seu site e quero: ${s}. Quais horários hoje?`; window.open(`https://wa.me/559891648974?text=${encodeURIComponent(m)}`,'_blank');}
 function enviar(){
  const n=document.getElementById('nome').value||'Cliente';
  const d=document.getElementById('data').value||'hoje';
  const h=document.getElementById('hora').value||'agora';
  const s=document.getElementById('serv').value;
- const msg=`Olá PA Barbearia! Sou o ${n}, quero agendar ${s} para ${d} às ${h}. Tv. Bandeirante 772. Confirmado?`;
+ const msg=`Olá PA Barbearia! Sou o ${n}, quero agendar ${s} para ${d} às ${h}.`;
  window.open(`https://wa.me/559891648974?text=${encodeURIComponent(msg)}`,'_blank');
 }
 </script>
