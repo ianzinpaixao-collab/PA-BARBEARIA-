@@ -7,72 +7,63 @@
 <style>
 :root{--gold:#FFD700;--black:#080808;--card:#121212}
 *{margin:0;padding:0;box-sizing:border-box}body{background:var(--black);color:#fff;font-family:'Inter',sans-serif}
-.top{padding:14px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;background:rgba(8,8,8,.95);backdrop-filter:blur(10px);z-index:99}
-.logo{font-family:'Oswald';letter-spacing:2px;font-size:20px} .logo span{color:var(--gold)}
-.btn{background:var(--gold);color:#000;padding:12px 22px;border-radius:8px;font-weight:800;text-decoration:none;display:inline-block;border:0;cursor:pointer}
-.hero{padding:50px 5%;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-.hero h1{font-family:'Oswald';font-size:48px;line-height:.95;text-transform:uppercase}
+.top{padding:14px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;background:rgba(8,8,8,.95);z-index:99}
+.btn{background:var(--gold);color:#000;padding:12px 22px;border-radius:8px;font-weight:800;text-decoration:none;display:inline-block}
+.hero{padding:40px 5%;display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.hero h1{font-family:'Oswald';font-size:42px;line-height:.95;text-transform:uppercase}
 .hero h1 em{color:var(--gold);font-style:normal}
 .box{background:var(--card);border-radius:16px;padding:12px;border:1px solid #222}
-.item{display:flex;justify-content:space-between;align-items:center;padding:18px;border-bottom:1px solid #222;cursor:pointer;transition:.2s}
+.item{display:flex;justify-content:space-between;align-items:center;padding:18px;border-bottom:1px solid #222;cursor:pointer}
 .item:hover{background:#1a1a1a}
-.item:last-child{border:0}
 .preco{color:var(--gold);font-weight:800;font-size:18px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.grid img{width:100%;height:320px;object-fit:cover;border-radius:16px;border:1px solid #222}
-.badge{display:inline-block;background:#1a1a1a;border:1px solid #333;padding:6px 12px;border-radius:20px;font-size:12px;color:#999;margin:4px}
-.wpp{position:fixed;bottom:18px;right:18px;background:#25D366;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;z-index:100;box-shadow:0 8px 20px rgba(0,0,0,.6)}
-@media(max-width:800px){.hero{grid-template-columns:1fr} .hero h1{font-size:34px} .grid img{height:220px}}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid img{width:100%;height:280px;object-fit:cover;border-radius:14px;border:1px solid #222}
+.wpp{position:fixed;bottom:18px;right:18px;background:#25D366;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:100}
+@media(max-width:800px){.hero{grid-template-columns:1fr} .hero h1{font-size:32px}}
 </style>
 </head>
 <body>
-<div class="top">
-<div class="logo">PA <span>BARBEARIA00</span></div>
-<a class="btn" href="https://wa.me/559891648974?text=Ol%C3%A1%20PA!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio">AGENDAR (98) 9164-8974</a>
-</div>
+<div class="top"><div style="font-family:'Oswald';letter-spacing:2px">PA <span style="color:#FFD700">BARBEARIA00</span></div><a class="btn" href="https://wa.me/559891648974?text=Ol%C3%A1%20PA!%20Vim%20pelo%20site%20e%20quero%20agendar">AGENDAR (98) 9164-8974</a></div>
 
 <div class="hero">
 <div>
-<div><span class="badge">📍 SANTA RITA - MA</span><span class="badge">⭐ 4.9 no Instagram</span><span class="badge">@pa_barbearia00</span></div>
-<h1 style="margin-top:14px">CORTES QUE<br><em>IMPRESSIONAM.</em><br>RESULTADO EXTRAORDINÁRIO</h1>
-<p style="color:#999;margin:16px 0;line-height:1.6">Entregando sempre o meu melhor pra lhe proporcionar um resultado extraordinário. Especialista em degradê, freestyle e acabamento na régua.</p>
-<a href="#precos" class="btn" style="padding:16px 28px;font-size:16px">VER PREÇOS E AGENDAR →</a>
-<p style="color:#555;font-size:12px;margin-top:12px">* Clique no serviço e já vai pro WhatsApp com mensagem pronta</p>
+<h1>CORTES QUE<br><em>IMPRESSIONAM.</em><br>RESULTADO EXTRAORDINÁRIO</h1>
+<p style="color:#999;margin:14px 0;line-height:1.6">Entregando sempre o meu melhor. Santa Rita-MA • @pa_barbearia00 • (98) 9164-8974</p>
+<a href="#precos" class="btn">VER PREÇOS E AGENDAR →</a>
 </div>
-<div class="box"><img src="pa_novo1.jpg" style="width:100%;border-radius:12px;height:420px;object-fit:cover"><p style="text-align:center;color:#666;font-size:12px;margin-top:8px">Freestyle exclusivo - @pa_barbearia00</p></div>
+<div class="box"><img src="IMG_20260926_212700.jpg" style="width:100%;border-radius:12px;height:400px;object-fit:cover"></div>
 </div>
 
 <div style="padding:20px 5% 40px" id="precos">
-<h2 style="font-family:'Oswald';font-size:30px;margin-bottom:16px">TABELA DE PREÇOS</h2>
+<h2 style="font-family:'Oswald';font-size:30px;margin-bottom:16px">TABELA DE PREÇOS - CLIQUE PARA AGENDAR</h2>
 <div class="box">
-<div class="item" onclick="zap('Corte Degradê - R$35')"><div><b>Corte Degradê na régua</b><small>Mais pedido da casa - acabamento perfeito</small></div><div class="preco">R$35</div></div>
-<div class="item" onclick="zap('Corte + Barba - R$55')"><div><b>Corte + Barba Completa</b><small>Toalha quente + hidratação</small></div><div class="preco">R$55</div></div>
-<div class="item" onclick="zap('Freestyle com Risco - R$40')"><div><b>Freestyle / Risco Artístico 🔥</b><small>Igual da foto 1 - desenho exclusivo</small></div><div class="preco">R$40</div></div>
-<div class="item" onclick="zap('Plano Mensal PA - R$99')"><div><b>Plano Mensal PA - 4 cortes</b><small>Economize R$41 no mês</small></div><div class="preco">R$99</div></div>
+<div class="item" onclick="zap('Corte Degradê - R$35')"><div><b>Corte Degradê</b><small style="color:#888">Na régua - mais pedido</small></div><div class="preco">R$35</div></div>
+<div class="item" onclick="zap('Freestyle com Risco - R$40')"><div><b>Freestyle / Risco Artístico 🔥</b><small style="color:#888">Desenho exclusivo</small></div><div class="preco">R$40</div></div>
+<div class="item" onclick="zap('Corte + Barba - R$55')"><div><b>Corte + Barba Completa</b><small style="color:#888">Toalha quente</small></div><div class="preco">R$55</div></div>
+<div class="item" onclick="zap('Plano Mensal PA - R$99')"><div><b>Plano Mensal PA - 4 cortes</b><small style="color:#888">Economize R$41</small></div><div class="preco">R$99</div></div>
 </div>
 </div>
 
 <div style="padding:10px 5% 60px">
 <h2 style="font-family:'Oswald';font-size:30px;margin-bottom:16px">ÚLTIMOS CORTES REAIS</h2>
 <div class="grid">
-<img src="pa_novo1.jpg" onclick="zap('Freestyle da foto 1')">
-<img src="pa_novo3.jpg" onclick="zap('Corte Degradê da foto 2')">
-<img src="pa_novo2.jpg" onclick="zap('Mid Fade da foto 3')">
-<img src="pa_novo4.jpg" onclick="zap('Mullet / Moicano da foto 4')">
+<img src="IMG_20260926_212700.jpg" onclick="zap('Freestyle foto 1')">
+<img src="IMG_20260926_212718.jpg" onclick="zap('Degradê foto 2')">
+<img src="IMG_20260926_212737.jpg" onclick="zap('Mid Fade foto 3')">
+<img src="IMG_20260926_212755.jpg" onclick="zap('Mullet foto 4')">
 </div>
 <br>
 <div class="box" style="text-align:center;padding:20px">
-<p style="color:#999">Gostou de um corte? Clique na foto e agende igual!</p><br>
 <a href="https://instagram.com/pa_barbearia00" target="_blank" class="btn" style="background:#222;color:#FFD700;border:1px solid #FFD700;width:100%">VER MAIS NO INSTA @pa_barbearia00 →</a><br><br>
 <a href="https://wa.me/559891648974?text=Ol%C3%A1%20PA!%20Vi%20seu%20site%20novo%20e%20quero%20agendar" class="btn" style="width:100%;padding:16px">AGENDAR AGORA NO WHATSAPP (98) 9164-8974 →</a>
 </div>
 </div>
 
-<a class="wpp" href="https://wa.me/559891648974?text=Ol%C3%A1%20PA%20Barbearia!%20Vi%20seu%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio">W</a>
+<a class="wpp" href="https://wa.me/559891648974?text=Ol%C3%A1%20PA%20Barbearia!%20Vi%20seu%20site%20e%20quero%20agendar">W</a>
 
 <script>
 function zap(serv){
- const msg = `Olá PA Barbearia! Vi seu site e quero agendar: ${serv}. Quais horários disponíveis hoje?`;
+ const msg = `Olá PA Barbearia! Vi seu site e quero agendar: ${serv}. Quais horários hoje?`;
  window.open(`https://wa.me/559891648974?text=${encodeURIComponent(msg)}`,'_blank');
 }
 </script>
