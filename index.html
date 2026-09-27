@@ -22,12 +22,10 @@
 .preco{color:var(--gold);font-weight:800;font-size:19px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .grid img{width:100%;height:280px;object-fit:cover;border-radius:14px;border:1px solid #222;cursor:pointer}
-.depo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.depo-card{background:var(--card);border:1px solid #222;padding:16px;border-radius:12px}
 .input{width:100%;padding:14px;border-radius:8px;border:0;margin:6px 0;background:#fff;color:#000}
 .wpp{position:fixed;bottom:18px;right:18px;background:var(--green);width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:100;text-decoration:none;color:#fff}
 .badge{background:#1a1a1a;border:1px solid #333;padding:6px 12px;border-radius:20px;font-size:11px;color:#aaa;display:inline-block;margin:3px}
-@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:34px}.depo{grid-template-columns:1fr}.grid img{height:200px}}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:34px}.grid img{height:200px}}
 </style>
 </head>
 <body>
@@ -39,12 +37,12 @@
 
 <div class="hero">
 <div>
-<span class="badge">📍 Tv. Bandeirante, 772 - Santa Rita MA</span><span class="badge">⭐ 4.9/5 - 187 avaliações</span><span class="badge">✂️ @pa_barbearia00</span>
+<span class="badge">📍 Tv. Bandeirante, 772 - Santa Rita MA</span><span class="badge">⭐ @pa_barbearia00</span>
 <h1>ENTREGANDO SEMPRE O MEU MELHOR PRA UM <em>RESULTADO EXTRAORDINÁRIO</em></h1>
-<p style="color:#999;margin:14px 0;line-height:1.6">Especialista em degradê, freestyle e acabamento na régua. Esquina da R. Castelo Branco, ao lado da UniCesumar.</p>
+<p style="color:#999;margin:14px 0;line-height:1.6">Especialista em degradê, freestyle e acabamento na régua. Esquina da R. Castelo Branco.</p>
 <div class="stats">
 <div class="stat"><b>150+</b><small>Clientes/mês</small></div>
-<div class="stat"><b>4.9★</b><small>No Google</small></div>
+<div class="stat"><b>Degradê</b><small>Na régua</small></div>
 <div class="stat"><b>2 Anos</b><small>Experiência</small></div>
 </div>
 <a href="#agenda" class="btn" style="padding:16px 28px">AGENDAR MEU HORÁRIO →</a>
@@ -54,12 +52,11 @@
 
 <div style="padding:20px 5%" id="precos">
 <h2 style="font-family:'Oswald';font-size:32px">TABELA DE PREÇOS</h2>
-<p style="color:#666;font-size:13px;margin-bottom:12px">Toque no serviço para agendar no WhatsApp</p>
-<div class="box">
-<div class="item" onclick="agendar('Corte Degradê R$35')"><div><b>Corte Degradê na Régua</b><br><small style="color:#888">Mais pedido</small></div><div class="preco">R$35</div></div>
-<div class="item" onclick="agendar('Freestyle com Risco R$40')"><div><b>Freestyle / Risco Artístico 🔥</b><br><small style="color:#888">Desenho exclusivo</small></div><div class="preco">R$40</div></div>
-<div class="item" onclick="agendar('Corte + Barba R$55')"><div><b>Corte + Barba Completa</b><br><small style="color:#888">Toalha quente</small></div><div class="preco">R$55</div></div>
-<div class="item" onclick="agendar('Barba R$25')"><div><b>Barba Completa</b><br><small style="color:#888">Desenho + alinhamento</small></div><div class="preco">R$25</div></div>
+<div class="box" style="margin-top:12px">
+<div class="item" onclick="agendar('Corte Degradê R$35')"><div><b>Corte Degradê na Régua</b></div><div class="preco">R$35</div></div>
+<div class="item" onclick="agendar('Freestyle com Risco R$40')"><div><b>Freestyle / Risco Artístico 🔥</b></div><div class="preco">R$40</div></div>
+<div class="item" onclick="agendar('Corte + Barba R$55')"><div><b>Corte + Barba Completa</b></div><div class="preco">R$55</div></div>
+<div class="item" onclick="agendar('Barba R$25')"><div><b>Barba Completa</b></div><div class="preco">R$25</div></div>
 <div class="item" style="background:linear-gradient(90deg,#FFD70022,#0000);border:1px solid #FFD70055" onclick="agendar('Plano Mensal PA R$99 - 4 cortes')"><div><b>💎 Plano Mensal PA - 4 cortes</b><br><small style="color:#FFD700">Economize R$41/mês</small></div><div class="preco">R$99</div></div>
 </div>
 </div>
@@ -78,7 +75,6 @@
 <h2 style="font-family:'Oswald';font-size:32px">AGENDE ONLINE</h2>
 <div class="box" style="max-width:500px;margin-top:12px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000">
 <h3 style="font-family:'Oswald';font-size:24px">AGENDAMENTO RÁPIDO</h3>
-<p style="font-size:13px">Vai direto pro WhatsApp (98) 9164-8974</p>
 <input id="nome" class="input" placeholder="Seu nome">
 <input id="data" class="input" type="date">
 <input id="hora" class="input" type="time">
@@ -87,21 +83,12 @@
 </div>
 </div>
 
-<div style="padding:20px 5% 20px">
-<h2 style="font-family:'Oswald';font-size:32px">O QUE FALAM DA PA</h2>
-<div class="depo" style="margin-top:12px">
-<div class="depo-card"><b>⭐⭐⭐⭐⭐</b><br><br>"Melhor corte de Santa Rita, acabamento impecável!"<br><small>- João Silva</small></div>
-<div class="depo-card"><b>⭐⭐⭐⭐⭐</b><br><br>"Freestyle top demais, todo mundo pergunta onde corto."<br><small>- Matheus S.</small></div>
-<div class="depo-card"><b>⭐⭐⭐⭐⭐</b><br><br>"Atendimento nota 10, já sou do plano mensal."<br><small>- Carlos A.</small></div>
-</div>
-</div>
-
 <div style="padding:10px 5% 30px">
 <h2 style="font-family:'Oswald';font-size:32px">ONDE ESTAMOS</h2>
 <div class="box" style="padding:0;overflow:hidden;margin-top:12px">
 <iframe src="https://www.google.com/maps?q=Tv.+Bandeirante+772+Santa+Rita+MA&z=18&output=embed" width="100%" height="280" style="border:0" loading="lazy"></iframe>
 <div style="padding:14px;display:flex;justify-content:space-between;align-items:center">
-<div><b>PA Barbearia 00</b><br><small style="color:#888">Tv. Bandeirante, 772<br>Esq. com R. Castelo Branco<br>Santa Rita - MA (98) 9164-8974</small></div>
+<div><b>PA Barbearia 00</b><br><small style="color:#888">Tv. Bandeirante, 772<br>Santa Rita - MA</small></div>
 <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Tv.+Bandeirante+772+Santa+Rita+MA" target="_blank">COMO CHEGAR</a>
 </div>
 </div>
@@ -109,20 +96,18 @@
 
 <div style="padding:20px 5% 80px;text-align:center;color:#666">
 <p>© 2026 PA Barbearia 00 - Tv. Bandeirante, 772 - Santa Rita MA</p>
-<p style="font-size:12px">Instagram @pa_barbearia00 • WhatsApp (98) 9164-8974</p>
 </div>
 
 <a class="wpp" href="https://wa.me/559891648974?text=Ol%C3%A1%20PA!%20Vi%20seu%20site%20e%20quero%20agendar">W</a>
 
 <script>
-function agendar(s){ const m=`Olá PA! Vi seu site e quero: ${s}. Quais horários hoje?`; window.open(`https://wa.me/559891648974?text=${encodeURIComponent(m)}`,'_blank');}
+function agendar(s){window.open(`https://wa.me/559891648974?text=${encodeURIComponent(`Olá PA! Quero: ${s}`)}`,'_blank');}
 function enviar(){
  const n=document.getElementById('nome').value||'Cliente';
  const d=document.getElementById('data').value||'hoje';
  const h=document.getElementById('hora').value||'agora';
  const s=document.getElementById('serv').value;
- const msg=`Olá PA Barbearia! Sou o ${n}, quero agendar ${s} para ${d} às ${h}.`;
- window.open(`https://wa.me/559891648974?text=${encodeURIComponent(msg)}`,'_blank');
+ window.open(`https://wa.me/559891648974?text=${encodeURIComponent(`Olá PA! Sou o ${n}, quero ${s} para ${d} às ${h}.`)}`,'_blank');
 }
 </script>
 </body>
